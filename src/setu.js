@@ -52,7 +52,7 @@ class Setu {
         }
     };
 
-    setBillExpiry(platformBillID = null) {
+    expirePaymentLink(platformBillID=null) {
         if (this.checkIfValuesExist() && !!platformBillID) {
             return requestHelper.post(
                 this.endpoints['bill-expiry'] + `/${platformBillID}/expire`,
